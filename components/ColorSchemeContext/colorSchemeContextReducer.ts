@@ -10,7 +10,6 @@ export type ColorSchemeState = {
   lightColorSchemes: colorSchemeAndMeta[];
   darkColorSchemes: colorSchemeAndMeta[];
   colorSchemes: colorSchemeAndMeta[];
-  previewType: PreviewType;
 };
 
 export type ColorSchemeAction =
@@ -30,12 +29,6 @@ export type ColorSchemeAction =
       type: 'setLightness';
       payload: {
         lightness: Lightness;
-      };
-    }
-  | {
-      type: 'setPreviewType';
-      payload: {
-        previewType: PreviewType;
       };
     };
 
@@ -82,11 +75,6 @@ export const colorSchemeReducer = (
           );
         }
         break;
-      case 'setPreviewType':
-        {
-          draft.previewType = action.payload.previewType;
-        }
-        break;
     }
   });
 
@@ -102,7 +90,6 @@ export const colorSchemeReducerInitialiser = (
   return {
     activeColorScheme: darkColorSchemes[0],
     lightness: 'dark',
-    previewType: 'terminal',
     lightColorSchemes,
     darkColorSchemes,
     colorSchemes,
@@ -130,6 +117,12 @@ export const useDispatchActions = (dispatch: Dispatch<ColorSchemeAction>) => {
           lightness,
         },
       });
+      // set the css light-dark() on the root
+      if (lightness === 'light') {
+        document.documentElement.dataset.lightness = 'light';
+      } else {
+        document.documentElement.dataset.lightness = 'dark';
+      }
     },
     [dispatch]
   );
@@ -146,23 +139,10 @@ export const useDispatchActions = (dispatch: Dispatch<ColorSchemeAction>) => {
     [dispatch]
   );
 
-  const setPreviewType = useCallback(
-    (previewType: PreviewType) => {
-      dispatch({
-        type: 'setPreviewType',
-        payload: {
-          previewType,
-        },
-      });
-    },
-    [dispatch]
-  );
-
   return {
     setActiveColorScheme,
     setLightness,
     setNextPrevColorScheme,
-    setPreviewType,
   };
 };
 

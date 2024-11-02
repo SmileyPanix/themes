@@ -18,7 +18,6 @@ const colorSchemeState: ColorSchemeState = {
   lightColorSchemes: [lightThemeA],
   darkColorSchemes: [],
   colorSchemes: [lightThemeA],
-  previewType: 'terminal',
 };
 
 const dispatch = jest.fn();

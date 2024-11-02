@@ -5,11 +5,11 @@ exports[`should render all the components 1`] = `
   class="container"
 >
   <figcaption>
-    <span
-      style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+    <div
+      class="visually-hidden"
     >
       Terminal code styled in the active color themes
-    </span>
+    </div>
   </figcaption>
   <div
     class="background"

@@ -6,10 +6,13 @@ import userEvent from '@testing-library/user-event';
 import TogglePreviewType from './TogglePreviewType';
 import {ColorSchemesProvider} from '@/components/ColorSchemeContext/ColorSchemeContext';
 import {darkThemeA, lightThemeA} from '@/utilities/mockColorSchemes';
+import {PreviewTypeProvider} from '@/components/PreviewTypeContext/PreviewTypeContext';
 
 const ProviderWrapper = () => (
   <ColorSchemesProvider colorSchemes={[darkThemeA, lightThemeA]}>
-    <TogglePreviewType />
+    <PreviewTypeProvider>
+      <TogglePreviewType />
+    </PreviewTypeProvider>
   </ColorSchemesProvider>
 );
 

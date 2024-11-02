@@ -15,9 +15,9 @@ const JestPreview = () => {
   return (
     <figure className={css.container}>
       <figcaption>
-        <VisuallyHidden>
+        <div className="visually-hidden">
           Terminal code styled in the active color themes
-        </VisuallyHidden>
+        </div>
       </figcaption>
       <div className={css.background}>
         <div>

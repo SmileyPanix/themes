@@ -8,6 +8,7 @@ import BackgroundColor from '@/components/BackgroundColor/BackgroundColor';
 import getColorSchemes from '@/requests/getColorSchemes';
 
 import './globals.css';
+import {PreviewTypeProvider} from '@/components/PreviewTypeContext/PreviewTypeContext';
 
 export const metadata = {
   title: 'Windows Terminal Colors',
@@ -23,14 +24,16 @@ export default async function RootLayout({
 }) {
   const colorSchemes = await getColorSchemes();
   return (
-    <html lang="en">
+    <html lang="en" data-lightness="dark">
       <body className={inter.variable}>
         <CopyColorSchemeProvider>
           <ColorSchemesProvider colorSchemes={colorSchemes}>
-            <LayoutWrapper>
-              <Header />
-              <BackgroundColor>{children}</BackgroundColor>
-            </LayoutWrapper>
+            <PreviewTypeProvider>
+              <LayoutWrapper>
+                <Header />
+                <BackgroundColor>{children}</BackgroundColor>
+              </LayoutWrapper>
+            </PreviewTypeProvider>
           </ColorSchemesProvider>
         </CopyColorSchemeProvider>
       </body>
