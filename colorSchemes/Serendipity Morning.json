@@ -1,0 +1,36 @@
+{
+  "name": "Serendipity Morning",
+  "background": "#FFFAF3",
+  "foreground": "#575279",
+  "cursorColor": "#9893A5",
+  "selectionBackground": "#F4EFEA",
+  "black": "#F2E9DE",
+  "brightBlack": "#6E6A86",
+  "blue": "#3788BE",
+  "brightBlue": "#3788BE",
+  "cyan": "#7397DE",
+  "brightCyan": "#7397DE",
+  "purple": "#886CDB",
+  "brightPurple": "#886CDB",
+  "white": "#575279",
+  "brightWhite": "#575279",
+  "green": "#77AAB3",
+  "brightGreen": "#77AAB3",
+  "red": "#D26A5D",
+  "brightRed": "#D26A5D",
+  "yellow": "#C8A299",
+  "brightYellow": "#C8A299",
+  "meta": {
+    "isDark": false,
+    "credits": [
+      {
+        "name": "Michael Andreuzza",
+        "link": "https://github.com/michael-andreuzza"
+      },
+      {
+        "name": "Chaphasilor",
+        "link": "https://github.com/Chaphasilor"
+      }
+    ]
+  }
+}

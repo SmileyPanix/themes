@@ -1,0 +1,36 @@
+{
+  "name": "Serendipity Sunset",
+  "background": "#272938",
+  "foreground": "#DEE0EF",
+  "cursorColor": "#8D8F9E",
+  "selectionBackground": "#313342",
+  "black": "#363847",
+  "brightBlack": "#6B6D7C",
+  "blue": "#709BBD",
+  "brightBlue": "#709BBD",
+  "cyan": "#A0B6E8",
+  "brightCyan": "#A0B6E8",
+  "purple": "#A392DC",
+  "brightPurple": "#A392DC",
+  "white": "#DEE0EF",
+  "brightWhite": "#DEE0EF",
+  "green": "#AAC9D4",
+  "brightGreen": "#AAC9D4",
+  "red": "#D1918F",
+  "brightRed": "#D1918F",
+  "yellow": "#EDD5D6",
+  "brightYellow": "#EDD5D6",
+  "meta": {
+    "isDark": true,
+    "credits": [
+      {
+        "name": "Michael Andreuzza",
+        "link": "https://github.com/michael-andreuzza"
+      },
+      {
+        "name": "Chaphasilor",
+        "link": "https://github.com/Chaphasilor"
+      }
+    ]
+  }
+}
